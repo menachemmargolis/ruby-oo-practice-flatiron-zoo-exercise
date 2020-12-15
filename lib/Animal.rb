@@ -1,18 +1,13 @@
-
-
-
-
 class Animal
 
-   attr_reader  :species
-   attr_accessor  :origin, :zoo, :city
+   attr_accessor :species, :origins, :zoo, :city
 
    @@all = []
 
-   def initialize(species, zoo, origin, city)
+   def initialize(species, origins, zoo, city)
       @species = species
+      @origins = origins
       @zoo = zoo
-      @origin = origin
       @city = city
       @@all << self
    end
@@ -21,14 +16,10 @@ class Animal
       @@all
    end
 
-
-
- 
- 
 end
 
-# Animal Class
- #An `animal` should be instantiated with the species (e.g. "Lion", "Koala", "Lynx") and its origins (e.g. "Australia", "Asia", "Europe"). 
+# ### Animal Class
+# - An `animal` should be instantiated with the species (e.g. "Lion", "Koala", "Lynx") and its origins (e.g. "Australia", "Asia", "Europe"). 
 # - `Animal#zoo` should return the zoo instance that the animal can be found in.
 # - `Animal#city` should return the city instance that the animal can be found in.
 # - `Animal#species` should return the species of the animal.
